@@ -1,0 +1,7 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(247, 61, 92);
+  background-color: rgb(252, 120, 142);
+}

@@ -1,0 +1,40 @@
+.forms {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ReactModal__Content {
+  width: 300px !important;
+  height: 350px !important;
+  position: fixed !important;
+  text-align: center;
+  top: 50% !important;
+  left: 50% !important;
+  max-width: 70%;
+  border-radius: 25px !important;
+  background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%) !important;
+  display: flex !important;
+  flex-direction: column;
+  text-transform: uppercase;
+  align-items: center !important;
+  justify-content: space-evenly;
+  color: white;
+  font-weight: bolder;
+  transform: translate(-50%, -50%);
+}
+.formtag {
+  background-color: aliceblue;
+  border-radius: 10px;
+  height: 700px;
+  max-height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 25px;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}

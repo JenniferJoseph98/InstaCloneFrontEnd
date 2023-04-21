@@ -1,0 +1,20 @@
+.addpopup {
+  position: fixed;
+  height: 380px;
+  display: flex;
+  margin: 25px 25px;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  border-radius: 25px;
+  top: 20%;
+  background: linear-gradient(
+    132deg,
+    rgb(253, 54, 133) 0%,
+    rgb(254, 207, 215) 100%
+  );
+
+  padding: 25px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
