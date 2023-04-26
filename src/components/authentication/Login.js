@@ -85,7 +85,7 @@ function Login() {
           </span>
           <input
             id="myInput"
-            type="text"
+            type="password"
             className="form-control"
             placeholder="Enter Password"
             value={password}
