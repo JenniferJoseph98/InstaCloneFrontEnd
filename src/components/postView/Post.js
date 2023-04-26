@@ -80,6 +80,7 @@ function Post() {
           response.json().then((result) => {
             console.log(result);
             setPost(result);
+            setSkip(skip + 10);
           });
         }
       })

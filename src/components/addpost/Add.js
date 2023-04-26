@@ -23,6 +23,7 @@ function Add() {
         }
       )
       .then((res) => {
+        console.log(res);
         alert("Post added");
         navigate("/post");
       })

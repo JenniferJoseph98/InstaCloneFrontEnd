@@ -5,6 +5,15 @@
   justify-content: center;
   flex-direction: column;
 }
+.postview-body {
+  margin-top: 100px;
+}
+.navbar-expand-lg {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  right: 0;
+}
 .navsRight {
   background-color: rgb(189, 179, 179);
 }

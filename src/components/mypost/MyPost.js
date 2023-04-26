@@ -89,11 +89,12 @@ function MyPost() {
   }
 
   useEffect(() => {
-    fetch(`${url}/${localStorage.getItem("name")}/${skip}`, {
+    fetch(`${url}/mypost/${skip}`, {
       method: "GET",
       headers: {
         token: token,
         email: email,
+        name: localStorage.getItem("name"),
         Accept: "application/json",
         "Content-Type": "application/json",
       },
@@ -106,6 +107,7 @@ function MyPost() {
           response.json().then((result) => {
             console.log(result);
             setPost(result);
+            setSkip(skip + 10);
           });
         }
       })
@@ -113,12 +115,14 @@ function MyPost() {
   }, [load]);
 
   const fetchData = async () => {
-    fetch(`${url}/${localStorage.getItem("name")}/${skip}`, {
+    fetch(`${url}/mypost/${skip}`, {
       method: "GET",
       headers: {
         token: token,
         email: email,
         Accept: "application/json",
+        name: localStorage.getItem("name"),
+
         "Content-Type": "application/json",
       },
     })
@@ -130,7 +134,7 @@ function MyPost() {
         } else {
           response.json().then((result) => {
             setPost([...post, ...result]);
-            if (result.length === 0 || result.length > 10) sethasMore(false);
+            if (result.length === 0) sethasMore(false);
             setSkip(skip + 10);
           });
         }

@@ -8,8 +8,10 @@ function Comments() {
   const navigate = useNavigate();
   const [flag, setFlag] = useState(true);
   let token = document.cookie.split("=")[1];
+  let name = localStorage.getItem("name");
 
   const state = location.state;
+  const val = name === state.name;
   const [newComments, setNewComments] = useState("");
   const [comments, setComments] = useState([]);
   let url = "https://insta-clone-back-end-gamma.vercel.app/comment";
@@ -192,8 +194,8 @@ function Comments() {
                             {items.comment}
                           </span>
                         </div>
-                        {state.name === localStorage.getItem("name") ||
-                          (items.name === localStorage.getItem("name") && (
+                        {(items.name === name || val) && (
+                          <>
                             <div
                               style={{
                                 height: "100%",
@@ -211,7 +213,8 @@ function Comments() {
                                 <AiFillDelete />
                               </button>
                             </div>
-                          ))}
+                          </>
+                        )}
                       </div>
                     );
                   })}
